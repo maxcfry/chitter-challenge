@@ -1,17 +1,12 @@
 Chitter Challenge
 =================
 
-* Feel free to use Google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or student, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9am Monday morning
-
-Challenge:
--------
-
-As usual please start by forking this repo.
-
-We are going to write a small Twitter clone that will allow the users to post messages to a public stream.
+Installation 
+------------
+1) Connect to psql
+2) Create the database using the psql command CREATE DATABASE bookmark_manager;
+3) Connect to the database using the pqsl command \c bookmark_manager;
+4) Run the query we have saved in the file 01_create_bookmarks_table.sql
 
 Features:
 -------
