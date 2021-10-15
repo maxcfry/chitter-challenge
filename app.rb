@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/chitter_wall'
 
 class Chitter < Sinatra::Base
   configure :development do 
@@ -11,7 +12,7 @@ class Chitter < Sinatra::Base
   end
 
   get '/chitter_wall' do 
-    'Chitter Wall'
+    @chitter_wall = Chitterwall.all
     erb :'chitter_wall/index'
   end
 
