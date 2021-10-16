@@ -8,8 +8,14 @@ class Chitter < Sinatra::Base
   end
 
   get '/' do 
-    'Chitter'
-  end
+    "You've signed up to Chitter!"
+    # erb :'chitter_wall/sign_up'
+  end 
+
+  # post '/' do 
+  #   Chitterwall.sign(username: params[:username])
+  #   redirect '/chitter_wall'
+  # end
 
   get '/chitter_wall' do 
     @chitter_wall = Chitterwall.all

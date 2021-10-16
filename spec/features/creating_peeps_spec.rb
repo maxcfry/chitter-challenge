@@ -4,6 +4,6 @@ feature 'Adding a new peep(post) to chitter' do
     fill_in('url', with: 'Disinformation')
     click_button('Submit')
 
-    expect(page).to have_content 'Disinformation'
+    expect(page).to have_content('Disinformation')
   end
 end

@@ -1,0 +1,1 @@
+ALTER TABLE wall ADD COLUMN username VARCHAR(60);

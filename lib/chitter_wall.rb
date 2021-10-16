@@ -20,4 +20,14 @@ class Chitterwall
 
     connection.exec("INSERT INTO wall (url) VALUES('#{url}')")
   end
+
+  # def self.sign(username:)
+  #   if ENV['ENVIRONMENT'] == 'test'
+  #     connection = PG.connect(dbname: 'chitter_manager_test')
+  #   else 
+  #     connection = PG.connect(dbname: 'chitter_manager')
+  #   end
+
+  #   connection.exec("INSERT INTO wall (username) VALUES('#{username}')") 
+  # end
 end
