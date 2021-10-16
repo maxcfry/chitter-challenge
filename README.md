@@ -3,12 +3,13 @@ Chitter Challenge
 
 Installation 
 ------------
-1) Connect to psql
-2) Create the database using the psql command CREATE DATABASE bookmark_manager;
-3) Connect to the database using the pqsl command \c bookmark_manager;
-4) Run the query we have saved in the file 01_create_bookmarks_table.sql
+1) Connect to `psql` and create the `chitter_manager` and `chitter_manager_test` databases:
+2) CREATE DATABASE bookmark_manager_test
 
-5) Create a test_database (such as 'chitter_manager_test'), and run the psql command for both databases ('chitter_manager' and 'chitter_manager_test'). The purpose of creating the test database is that it allows you to reset the database every time you run the tests.
+3) Connect to the database using the pqsl command \c bookmark_manager;
+4) To set up the appropriate tables, connect to each database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+
+5) Create a test_database (such as 'chitter_manager_test'), and run the psql command for both databases ('chitter_manager' and 'chitter_manager_test'). The purpose of creating the test database is that it allows you to reset the contents of the database every time you run the tests.
 
 Features:
 -------

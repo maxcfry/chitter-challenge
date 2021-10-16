@@ -21,7 +21,7 @@ class Chitter < Sinatra::Base
   end
 
   post '/chitter_wall' do
-    Chitter.create(url: params[:url])
+    Chitterwall.create(url: params[:url])
     redirect '/chitter_wall'
   end
  
