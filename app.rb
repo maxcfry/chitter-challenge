@@ -8,14 +8,22 @@ class Chitter < Sinatra::Base
   end
 
   get '/' do 
-    'Chitter Wall'
+    'Chitter'
   end
 
   get '/chitter_wall' do 
-    p ENV 
     @chitter_wall = Chitterwall.all
     erb :'chitter_wall/index'
   end
 
+  get '/chitter_wall/new' do
+    erb :'chitter_wall/new'
+  end
+
+  post '/chitter_wall' do
+    Chitter.create(url: params[:url])
+    redirect '/chitter_wall'
+  end
+ 
   run! if app_file == $0
 end

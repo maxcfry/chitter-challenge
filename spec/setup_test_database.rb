@@ -1,8 +1,7 @@
 require 'pg'
 
-p "Setting up test database..."
+def setup_test_database
+  connection = PG.connect(dbname: 'chitter_manager_test')
 
-connection = PG.connect(dbname: 'chitter_manager_test')
-
-connection.exec("TRUNCATE wall;")
-
+  connection.exec("TRUNCATE wall;")
+end

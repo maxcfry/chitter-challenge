@@ -13,7 +13,15 @@ describe Chitterwall do
 
       expect(wall).to include "An uninformed opinion"
       expect(wall).to include "A controversial rant"
-      expect(wall).to include "Misinformation"
+      expect(wall).to include "Misinformation" 
+    end
+  end
+
+  describe '.create' do 
+    it 'creates a new peep (tweet)' do
+      Chitterwall.create(url: 'Disinformation')
+
+      expect(Chitterwall.all).to include 'Disinformation'
     end
   end
 end
