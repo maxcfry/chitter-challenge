@@ -12,6 +12,7 @@ class Chitter < Sinatra::Base
   end
 
   get '/chitter_wall' do 
+    p ENV 
     @chitter_wall = Chitterwall.all
     erb :'chitter_wall/index'
   end

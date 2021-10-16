@@ -8,6 +8,8 @@ Installation
 3) Connect to the database using the pqsl command \c bookmark_manager;
 4) Run the query we have saved in the file 01_create_bookmarks_table.sql
 
+5) Create a test_database (such as 'chitter_manager_test'), and run the psql command for both databases ('chitter_manager' and 'chitter_manager_test'). The purpose of creating the test database is that it allows you to reset the database every time you run the tests.
+
 Features:
 -------
 

@@ -22,6 +22,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
+
 RSpec.configure do |config|
   config.after(:suite) do
     puts
