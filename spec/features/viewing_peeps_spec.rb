@@ -1,11 +1,20 @@
 require 'pg'
-
 feature 'Viewing peeps' do 
-  scenario 'A user can see peeps' do 
-    Chitterwall.create(url: 'An uninformed opinion')
-    Chitterwall.create(url: 'Misinformation')
-    Chitterwall.create(url: 'A controversial rant')
+  feature 'visiting the homepage' do 
+    scenario 'the page title is visible' do 
+      visit('/')
 
-    visit '/chitter_wall'
+      expect(page).to have_content 'Welcome to Chitter!'
+    end
+  end
+
+  feature 'Viewing peeps' do 
+    scenario 'A user can see peeps' do 
+      Chitterwall.create(url: 'An uninformed opinion')
+      Chitterwall.create(url: 'A controversial rant')
+      Chitterwall.create(url: 'Misinformation')
+
+      visit '/chitter_wall'
+    end
   end
 end
